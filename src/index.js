@@ -1,4 +1,4 @@
-// import { onLoad } from './helpers/onLoad';
+import { onLoad } from './helpers/onLoad';
 import { onSearch } from './onSearch';
 
 // отримую HTML елементи
