@@ -26,7 +26,7 @@ function onLoad(entries, observer) {
           //   observer.observe(target);
 
           if (hits.length < 40) {
-            observer.unobserve(target);
+            observer.unobserver(target);
             Notify.failure(
               "We're sorry, but you've reached the end of search results."
             );
