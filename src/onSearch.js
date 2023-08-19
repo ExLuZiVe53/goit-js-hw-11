@@ -50,3 +50,29 @@ function onSearch(evt) {
     .catch(err => console.log(err));
 }
 export { onSearch };
+
+// Перевірка на останню сторінку
+// try {
+//   const data = await fetchPictures(searchQuery, currentPage);
+
+//   if (currentPage === 1) {
+//     Notiflix.Notify.success(`Hooray! We found ${data.data.totalHits} images.`);
+//   }
+//   if (
+//     currentPage === Math.floor(data.data.totalHits / Per_page) ||
+//     data.data.hits.length < 40
+//   ) {
+//     observer.unobserve(target);
+//     spanEl.textContent =
+//       "We're sorry, but you've reached the end of search results.";
+//   }
+//   currentPage += 1;
+//   addMarkup(galleryEL, createMarkup(data.data.hits));
+//   lightbox.refresh();
+// } catch (err) {
+//   Notiflix.Report.failure(
+//     'Error',
+//     'Sorry, there are no images matching your search query. Please try again',
+//     'ok'
+//   );
+// }
