@@ -18,6 +18,7 @@ function onSearch(evt) {
   fetchPictures(searchQuery.value)
     .then(datas => {
       const { hits, totalHits, total } = datas.data;
+      // console.log(hits.length);
       // нотифікашка для неправильного вводу
       if (!hits.length) {
         return Notify.failure(
@@ -41,6 +42,7 @@ function onSearch(evt) {
       }
       // нотифікашка  кінця завантаження картинок
       if (total === hits.length) {
+        console.log(hits.length);
         observer.unobserve(target);
         return Notify.failure(
           "We're sorry, but you've reached the end of search results."

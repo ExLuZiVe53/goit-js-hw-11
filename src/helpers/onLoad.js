@@ -5,6 +5,8 @@ import { Notify } from 'notiflix';
 import SimpleLightbox from 'simplelightbox';
 // Додатковий імпорт стилів
 import 'simplelightbox/dist/simple-lightbox.min.css';
+import '/dist/index.34df27b5.css';
+
 let gallery = new SimpleLightbox('.gallery a', {
   captionDelay: 250,
 });
@@ -14,7 +16,7 @@ const galleryContainer = document.querySelector('.gallery');
 const target = document.querySelector('.js-guard');
 
 function onLoad(entries, observer) {
-  console.log(entries);
+  // console.log(entries);
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       currentPage += 1;
