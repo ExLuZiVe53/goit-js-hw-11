@@ -37,6 +37,7 @@ function onLoad(entries, observer) {
         })
         .catch(err => {
           if ((err.status = 400)) {
+            observer.unobserve(target);
             Notify.failure(
               "We're sorry, but you've reached the end of search results."
             );

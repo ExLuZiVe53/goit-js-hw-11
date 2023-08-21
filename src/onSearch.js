@@ -41,6 +41,15 @@ function onSearch(evt) {
         });
       }
       // нотифікашка  кінця завантаження картинок
+      if (
+        currentPage === Math.floor(datas.data.totalHits / Per_page) ||
+        datas.data.hits.length < 40
+      ) {
+        observer.unobserve(target);
+        Notify.failure(
+          "We're sorry, but you've reached the end of search results."
+        );
+      }
       if (total === hits.length) {
         console.log(hits.length);
         observer.unobserve(target);
