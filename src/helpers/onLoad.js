@@ -1,7 +1,9 @@
+// імпорт функцій
 import { fetchPictures } from './fetchPictures';
 import { createCards } from './createCards';
+// імпорт бібліотеки Notiflix
 import { Notify } from 'notiflix';
-// імпортую SimpleLightbox
+// імпорт SimpleLightbox
 import SimpleLightbox from 'simplelightbox';
 // Додатковий імпорт стилів
 import 'simplelightbox/dist/simple-lightbox.min.css';

@@ -4,5 +4,5 @@ import { onSearch } from './onSearch';
 // отримую HTML елементи
 const form = document.querySelector('#search-form');
 
-// вішаю слухач на форму
+// вішаємо прослуховувач подій на форму
 form.addEventListener('submit', onSearch);

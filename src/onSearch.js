@@ -11,15 +11,14 @@ let gallery = new SimpleLightbox('.gallery a', {
   captionDelay: 250,
 });
 function onSearch(evt) {
-  // скидую рандомні налаштуваня
+  // ресет стандартних налаштуваннь
   evt.preventDefault();
   const { searchQuery } = evt.currentTarget.elements;
 
   fetchPictures(searchQuery.value)
     .then(datas => {
       const { hits, totalHits, total } = datas.data;
-      // console.log(hits.length);
-      // нотифікашка для неправильного вводу
+      // Перевірка на неправельний ввод коду
       if (!hits.length) {
         return Notify.failure(
           'Sorry, there are no images matching your search query. Please try again.'
@@ -40,7 +39,7 @@ function onSearch(evt) {
           behavior: 'smooth',
         });
       }
-      // нотифікашка  кінця завантаження картинок
+      // Перевірка кінець завантаження картинок
       if (
         currentPage === Math.floor(datas.data.totalHits / Per_page) ||
         datas.data.hits.length < 40
